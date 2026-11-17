@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="fr" data-fr-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Informations - maître-autel - Constat d’état - Patrinotes</title>
+  <link rel="preload" href="dsfr/fonts/Marianne-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="dsfr/core/core.min.css">
+  <link rel="stylesheet" href="dsfr/component/link/link.min.css">
+  <link rel="stylesheet" href="dsfr/component/button/button.min.css">
+  <link rel="stylesheet" href="dsfr/component/logo/logo.min.css">
+  <link rel="stylesheet" href="dsfr/component/badge/badge.min.css">
+  <link rel="stylesheet" href="dsfr/component/form/form.min.css">
+  <link rel="stylesheet" href="dsfr/component/input/input.min.css">
+  <link rel="stylesheet" href="dsfr/component/header/header.min.css">
+  <link rel="stylesheet" href="dsfr/component/tile/tile.min.css">
+  <link rel="stylesheet" href="dsfr/component/footer/footer.min.css">
+  <link rel="stylesheet" href="dsfr/component/alert/alert.min.css">
+  <link rel="stylesheet" href="dsfr/component/breadcrumb/breadcrumb.min.css">
+  <link rel="stylesheet" href="dsfr/component/modal/modal.min.css">
+  <link rel="stylesheet" href="dsfr/component/sidemenu/sidemenu.min.css">
+  <link rel="stylesheet" href="dsfr/component/radio/radio.min.css">
+  <link rel="stylesheet" href="dsfr/component/toggle/toggle.min.css">
+  <link rel="stylesheet" href="dsfr/component/accordion/accordion.min.css">
+  <link rel="stylesheet" href="dsfr/component/skiplink/skiplink.min.css">
+  <link rel="stylesheet" href="dsfr/utility/icons/icons-map/icons-map.min.css">
+  <link rel="stylesheet" href="dsfr/utility/icons/icons-user/icons-user.min.css">
+  <link rel="stylesheet" href="dsfr/utility/icons/icons-system/icons-system.min.css">
+  <link rel="stylesheet" href="dsfr/utility/icons/icons-document/icons-document.min.css">
+  <link rel="stylesheet" href="dsfr/utility/icons/icons-design/icons-design.min.css">
+  <link rel="stylesheet" href="dsfr/utility/icons/icons-media/icons-media.min.css">
+  <link rel="stylesheet" href="dsfr/utility/icons/icons-arrows/icons-arrows.min.css">
+  <link rel="stylesheet" href="dsfr/utility/icons/icons-buildings/icons-buildings.min.css">
+  <link rel="stylesheet" href="css/patrinotes.css">
+</head>
+<body>
+  <div class="fr-skiplinks">
+    <nav class="fr-container" role="navigation" aria-label="Accès rapide">
+      <ul class="fr-skiplinks__list">
+        <li><a class="fr-link" href="#contenu">Contenu</a></li>
+        <li><a class="fr-link" href="#footer">Pied de page</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <header role="banner" class="fr-header">
+    <div class="fr-header__body">
+      <div class="fr-container">
+        <div class="fr-header__body-row">
+          <div class="fr-header__brand fr-enlarge-link">
+            <div class="fr-header__brand-top">
+              <div class="fr-header__logo">
+                <p class="fr-logo">Ministère<br>de la Culture</p>
+              </div>
+            </div>
+            <div class="fr-header__service">
+              <a href="index.html" title="Accueil - Patrinotes - Ministère de la Culture">
+                <p class="fr-header__service-title">Patrinotes
+                  <span class="fr-badge fr-badge--sm fr-badge--success fr-badge--no-icon">En ligne</span>
+                </p>
+              </a>
+              <p class="fr-header__service-tagline">Les outils du patrimoine en mobilité</p>
+            </div>
+          </div>
+          <div class="fr-header__tools">
+            <div class="fr-header__tools-links">
+              <ul class="fr-btns-group">
+                <li><a class="fr-btn fr-icon-account-circle-fill" href="#">Mon compte</a></li>
+                <li><a class="fr-btn fr-icon-government-fill" href="#">UDAP</a></li>
+                <li><a class="fr-btn fr-icon-question-fill" href="#">Aide</a></li>
+                <li><a class="fr-btn fr-icon-logout-box-r-line" href="#">Déconnexion</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="contenu" role="main">
+    <section class="pn-band pn-band--info pn-band--bordered fr-pt-3w fr-pb-6w" aria-labelledby="titre-monument">
+      <div class="fr-container">
+        <nav role="navigation" class="fr-breadcrumb" aria-label="vous êtes ici :">
+          <ol class="fr-breadcrumb__list">
+            <li><a class="fr-breadcrumb__link" href="index.html">Retour à l’accueil</a></li>
+          </ol>
+        </nav>
+        <div class="fr-grid-row fr-grid-row--gutters">
+          <div class="fr-col-lg-9">
+            <p class="fr-text--lead fr-mb-0">Constat d’état</p>
+            <h1 id="titre-monument" class="fr-text--lead fr-text--bold fr-mb-2w">maître-autel</h1>
+            <!-- Non cliquable pour le prototype -->
+            <a class="fr-link fr-link--icon-left fr-icon-edit-fill" href="#">Changer de monument ou d’UP</a>
+          </div>
+          <div class="fr-col-lg-3">
+            <button type="button" class="fr-btn fr-btn--secondary fr-btn--icon-left fr-icon-alarm-warning-fill pn-btn-block" data-drawer-open="modal-alerte" aria-haspopup="dialog">Signaler une alerte...</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="fr-container">
+      <div class="pn-split">
+        <div class="pn-split__menu">
+          <nav class="fr-sidemenu" role="navigation" aria-label="Menu du constat d’état">
+            <div class="fr-sidemenu__inner">
+              <ul class="fr-sidemenu__list">
+                <li class="fr-sidemenu__item">
+                  <p class="fr-sidemenu__title" id="menu-monument-titre">Le monument historique</p>
+                  <div>
+                    <ul class="fr-sidemenu__list" aria-labelledby="menu-monument-titre">
+                      <li class="fr-sidemenu__item fr-sidemenu__item--active"><a class="fr-sidemenu__link" href="monument.html" target="_self" aria-current="page">Informations</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="fr-sidemenu__item">
+                  <p class="fr-sidemenu__title" id="menu-saisie-titre">Saisie du constat d’état</p>
+                  <div>
+                    <ul class="fr-sidemenu__list" aria-labelledby="menu-saisie-titre">
+                      <li class="fr-sidemenu__item"><a class="fr-sidemenu__link" href="contexte.html" target="_self">Contexte de la visite</a></li>
+                      <li class="fr-sidemenu__item"><a class="fr-sidemenu__link" href="constat-detaille.html" target="_self">Constat détaillé</a></li>
+                      <li class="fr-sidemenu__item"><a class="fr-sidemenu__link" href="constat-general.html" target="_self">Constat général</a></li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+
+        <div class="pn-split__main">
+          <div class="pn-page-content">
+            <h2 class="pn-section-label">Informations</h2>
+            <div>
+              <img class="pn-gallery fr-responsive-img" src="img/galerie-photos.jpg" width="793" height="266"
+                   alt="Galerie de photos du maître-autel : 5 vignettes, dont une vue de la chapelle avec ses deux retables latéraux. Bouton « Afficher les 27 photos ».">
+
+              <h3 class="fr-h5 fr-mt-4w fr-mb-3w">Édifice de conservation</h3>
+              <div class="fr-grid-row fr-grid-row--gutters">
+                <div class="fr-col-6"><p class="fr-text--bold fr-mb-1v">Titre courant</p><p class="fr-mb-0">Prieuré Notre-Dame-du-Repos</p></div><div class="fr-col-6"><p class="fr-text--bold fr-mb-1v">Référence Mérimée</p><p class="fr-mb-0">PA00079952 <a class="fr-link fr-link--sm" href="#" target="_blank" rel="noopener external" title="voir sur POP - nouvelle fenêtre">voir sur POP</a></p></div><div class="fr-col-6"><p class="fr-text--bold fr-mb-1v">Identifiant AgrÉgée</p><p class="fr-mb-0">SDISAX</p></div><div class="fr-col-6"><p class="fr-text--bold fr-mb-1v">Commune</p><p class="fr-mb-0">Médavy</p></div><div class="fr-col-6"><p class="fr-text--bold fr-mb-1v">Adresse</p><p class="fr-mb-0">Non renseigné</p></div><div class="fr-col-6"><p class="fr-text--bold fr-mb-1v">Emplacement de l’objet</p><p class="fr-mb-0">chevet</p></div>
+              </div>
+
+              <h3 class="fr-h5 fr-mt-6w fr-mb-3w">Informations de l’objet</h3>
+              <div class="fr-grid-row fr-grid-row--gutters">
+                <div class="fr-col-6"><p class="fr-text--bold fr-mb-1v">Titre courant</p><p class="fr-mb-0">maître-autel</p></div><div class="fr-col-6"><p class="fr-text--bold fr-mb-1v">Référence Palissy</p><p class="fr-mb-0">PM61000888 <a class="fr-link fr-link--sm" href="#" target="_blank" rel="noopener external" title="voir sur POP - nouvelle fenêtre">voir sur POP</a></p></div><div class="fr-col-6"><p class="fr-text--bold fr-mb-1v">Identifiant AgrÉgée</p><p class="fr-mb-0">WDIVHR</p></div><div class="fr-col-6"><p class="fr-text--bold fr-mb-1v">Nature de la protection</p><p class="fr-mb-0">Inscrit</p></div><div class="fr-col-6"><p class="fr-text--bold fr-mb-1v">Numéro d’inventaire</p><p class="fr-mb-0">1234567890</p></div><div class="fr-col-6"><p class="fr-text--bold fr-mb-1v">Interventions antérieures</p><p class="fr-mb-0">Non-renseigné</p></div>
+              </div>
+
+              <!-- Accordéon : non interactif dans ce prototype -->
+              <section class="fr-accordion pn-accordion-static fr-mt-6w">
+                <h3 class="fr-accordion__title"><button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="accordeon-constats">Constats antérieurs et alertes</button></h3>
+                <div class="fr-collapse" id="accordeon-constats"></div>
+              </section>
+
+              <h3 class="fr-h5 fr-mt-6w fr-mb-1v">Ensemble patrimonial</h3>
+              <p class="fr-text--sm pn-muted fr-mb-2w">Dépliez les unités patrimoniales pour parcourir la hiérarchie et accéder aux fiches.<br>Le nombre de constats existants est indiqué par UP.</p>
+              <ul class="pn-tree">
+                <li>
+                  <div class="pn-tree__row">
+                    <button type="button" class="fr-btn fr-btn--tertiary-no-outline fr-btn--sm fr-icon-arrow-down-s-line" aria-expanded="true" title="Replier la branche">Replier la branche</button>
+                    <a class="fr-link" href="#">Prieuré Notre-Dame-du-Repos</a>
+                  </div>
+                  <ul class="pn-tree__children">
+                    <li class="pn-tree__current"><span aria-current="true">maître-autel</span></li>
+                  </ul>
+                </li>
+              </ul>
+
+              <div class="fr-grid-row fr-grid-row--middle fr-grid-row--right pn-actions fr-mt-6w">
+                <div class="fr-col"><button type="button" class="fr-btn fr-btn--secondary fr-btn--lg fr-btn--icon-left fr-icon-edit-fill">Compléter les infos</button></div>
+                <div class="fr-col-auto"><a class="fr-btn fr-btn--lg fr-btn--icon-right fr-icon-arrow-right-line" href="contexte.html">Contexte de la visite</a></div>
+              </div>
+            </div>
+          </div>
+          <div class="pn-pop-band fr-mt-6w">
+            <a class="fr-link fr-link--sm fr-icon-external-link-line fr-link--icon-left" href="#" target="_blank" rel="noopener external" title="Consulter la page POP du monument - nouvelle fenêtre">Consulter la page POP du monument</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Panneau latéral « Signaler une alerte » : modale DSFR ancrée à droite (CSS patrinotes.css) -->
+    <dialog id="modal-alerte" class="fr-modal pn-drawer" aria-labelledby="modal-alerte-title">
+      <div class="fr-container fr-container--fluid">
+        <div class="fr-modal__body">
+          <div class="fr-modal__header">
+            <button type="button" class="fr-btn--close fr-btn" data-drawer-close title="Fermer le panneau">Fermer</button>
+          </div>
+          <div class="fr-modal__content">
+            <h1 id="modal-alerte-title" class="fr-modal__title">Signaler une alerte</h1>
+            <form onsubmit="return false">
+              <fieldset class="fr-fieldset fr-mb-3w" id="alerte-type" aria-labelledby="alerte-type-legend">
+                <legend class="fr-fieldset__legend fr-fieldset__legend--regular" id="alerte-type-legend">Problème à signaler</legend>
+                <div class="fr-fieldset__element"><div class="fr-radio-group"><input type="radio" id="alerte-absent" name="alerte-type"><label class="fr-label" for="alerte-absent">Objet absent</label></div></div>
+                <div class="fr-fieldset__element"><div class="fr-radio-group"><input type="radio" id="alerte-insecurite" name="alerte-type"><label class="fr-label" for="alerte-insecurite">Objet en insécurité</label></div></div>
+                <div class="fr-fieldset__element"><div class="fr-radio-group"><input type="radio" id="alerte-degradation" name="alerte-type"><label class="fr-label" for="alerte-degradation">Dégradation importante</label></div></div>
+              </fieldset>
+
+              <div class="fr-input-group">
+                <div class="fr-grid-row fr-grid-row--middle">
+                  <div class="fr-col"><label class="fr-label" for="alerte-commentaires">Commentaires</label></div>
+                  <div class="fr-col-auto"><button type="button" class="fr-btn fr-btn--tertiary-no-outline fr-btn--sm fr-btn--icon-left fr-icon-mic-fill">Dicter</button></div>
+                </div>
+                <textarea class="fr-input" id="alerte-commentaires" name="alerte-commentaires" rows="5"></textarea>
+              </div>
+
+              <div class="fr-grid-row fr-grid-row--middle fr-mt-3w">
+                <div class="fr-col-auto fr-mr-2w"><button type="button" class="fr-btn fr-btn--secondary fr-btn--icon-left fr-icon-image-add-fill">Ajouter photo</button></div>
+                <div class="fr-col"><p class="fr-hint-text fr-mb-0">Taille maximale : 5 Mo. Formats supportés : jpg, png.<br>Plusieurs fichiers possibles</p></div>
+              </div>
+
+              <hr class="fr-mt-3w fr-pb-1w">
+              <div class="fr-grid-row">
+                <div class="fr-col-auto fr-mr-4w"><div class="fr-toggle"><input type="checkbox" class="fr-toggle__input" id="alerte-courriel"><label class="fr-toggle__label" for="alerte-courriel">Alerter par courriel</label></div></div>
+                <div class="fr-col-auto"><div class="fr-toggle"><input type="checkbox" class="fr-toggle__input" id="alerte-rapport"><label class="fr-toggle__label" for="alerte-rapport">Afficher dans le rapport</label></div></div>
+              </div>
+              <p class="fr-text--sm pn-muted fr-mt-1w fr-mb-3w">Service destinataire : CAOA<br>courriel-service@culture.gouv.fr <a class="fr-link fr-link--sm" href="#">modifier</a></p>
+
+              <button type="button" class="fr-btn fr-btn--lg pn-btn-block" data-drawer-close>Valider</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </dialog>
+  </main>
+
+  <footer class="fr-footer" role="contentinfo" id="footer">
+    <div class="fr-container">
+      <div class="fr-footer__body">
+        <div class="fr-footer__brand fr-enlarge-link">
+          <a href="index.html" title="Retour à l’accueil du site - Patrinotes - Ministère de la Culture">
+            <p class="fr-logo">Ministère<br>de la Culture</p>
+          </a>
+        </div>
+        <div class="fr-footer__content">
+          <ul class="fr-footer__content-list">
+            <li class="fr-footer__content-item"><a class="fr-footer__content-link" target="_blank" rel="noopener external" title="info.gouv.fr - nouvelle fenêtre" href="https://info.gouv.fr">info.gouv.fr</a></li>
+            <li class="fr-footer__content-item"><a class="fr-footer__content-link" target="_blank" rel="noopener external" title="service-public.fr - nouvelle fenêtre" href="https://service-public.fr">service-public.fr</a></li>
+            <li class="fr-footer__content-item"><a class="fr-footer__content-link" target="_blank" rel="noopener external" title="legifrance.gouv.fr - nouvelle fenêtre" href="https://legifrance.gouv.fr">legifrance.gouv.fr</a></li>
+            <li class="fr-footer__content-item"><a class="fr-footer__content-link" target="_blank" rel="noopener external" title="data.gouv.fr - nouvelle fenêtre" href="https://data.gouv.fr">data.gouv.fr</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="fr-footer__bottom">
+        <ul class="fr-footer__bottom-list">
+          <li class="fr-footer__bottom-item"><a class="fr-footer__bottom-link" href="#">Accessibilité : non conforme</a></li>
+          <li class="fr-footer__bottom-item"><a class="fr-footer__bottom-link" href="#">Mentions légales</a></li>
+          <li class="fr-footer__bottom-item"><a class="fr-footer__bottom-link" href="#">Politique de confidentialité</a></li>
+          <li class="fr-footer__bottom-item"><a class="fr-footer__bottom-link" href="#">Conditions générales d’utilisation</a></li>
+          <li class="fr-footer__bottom-item"><a class="fr-footer__bottom-link" href="#">Plan du site</a></li>
+        </ul>
+        <div class="fr-footer__bottom-copy">
+          <p>Sauf mention explicite de propriété intellectuelle détenue par des tiers, les contenus de ce site sont proposés sous <a href="https://github.com/etalab/licence-ouverte/blob/master/LO.md" target="_blank" rel="noopener external" title="licence etalab-2.0 - nouvelle fenêtre">licence etalab-2.0</a></p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/drawer.js"></script>
+</body>
+</html>

@@ -1,0 +1,127 @@
+/* Surcharges minimales — tout le reste vient du DSFR. */
+.pn-band--info { background-color: var(--background-contrast-info); }
+.pn-hero { background: linear-gradient(112deg, var(--blue-france-975-75) 0%, var(--blue-france-925-125) 100%); }
+.pn-hero__illu { display: block; max-width: 100%; height: auto; }
+.pn-combobox { position: relative; }
+.pn-popup { position: absolute; top: 100%; left: 0; right: -3rem; /* = largeur du champ + bouton pin (588 px) */ z-index: 10; margin-top: 0;
+  background: var(--background-raised-grey); box-shadow: var(--overlap-shadow); }
+.pn-popup[hidden] { display: none; }
+.pn-popup.fr-tabs { overflow: visible; margin-top: 0; padding-top: 0; box-shadow: var(--overlap-shadow); }
+.pn-popup .fr-tabs__panel { left: 0; margin-right: 0; padding: 0; }
+.pn-popup .fr-tabs__panel:not(.fr-tabs__panel--selected) { display: none; }
+.pn-list { list-style: none; margin: 0; padding: .5rem 0; max-height: 32rem; overflow-y: auto; }
+.pn-option { display: block; padding: .5rem 1rem; cursor: pointer; color: var(--text-action-high-blue-france); }
+.pn-option__title { display: block; }
+.pn-option__loc { display: block; margin: .125rem 0 0; }
+.pn-combobox .fr-input-group { margin-bottom: 0; }
+.pn-option[aria-selected="true"] { background-color: var(--background-default-grey-hover); outline: 2px solid #0a76f6; outline-offset: -2px; }
+.pn-empty { padding: .5rem 1rem; color: var(--text-mention-grey); }
+.pn-tile-center .fr-tile__content { text-align: center; }
+.pn-combobox .fr-input { background-color: var(--background-default-grey); } /* fond blanc (adaptation sur fond coloré) */
+.pn-tile-static .fr-tile__title { color: var(--text-title-blue-france); }
+.pn-tile-static .fr-tile__title:before { background-image: linear-gradient(0deg, var(--border-active-blue-france), var(--border-active-blue-france)); }
+.pn-alert-inline { margin-top: 0; padding-right: .75rem; } /* alerte sans bouton de fermeture, alignée sur le bouton (maquette) */
+
+/* ---- Page monument ---- */
+.pn-band--bordered { border-bottom: 1px solid var(--border-default-grey); }
+.pn-btn-block { width: 100%; justify-content: center; }
+.pn-muted { color: var(--text-mention-grey); }
+.pn-split { display: grid; grid-template-columns: 343px minmax(0, 1fr); }
+.pn-split__menu { padding: 4.25rem 3.75rem 0 0; border-right: 1px solid var(--border-default-grey); }
+.pn-split__main { padding-left: 4rem; min-width: 0; }
+.pn-tabs-plain.fr-tabs { box-shadow: none; overflow: visible; margin-top: 0; padding-top: 0; }
+.pn-tabs-plain.fr-tabs:before { display: none; }
+.pn-tabs-plain .fr-tabs__panel { padding: 1rem 0 0; }
+.pn-tabs-plain .fr-tabs__list { padding-left: 0; }
+.pn-gallery { display: block; width: 100%; height: auto; }
+.pn-tree, .pn-tree__children { list-style: none; margin: 0; padding: 0; }
+.pn-tree__row { display: flex; align-items: center; gap: .5rem; min-height: 2.5rem; }
+.pn-tree__children { position: relative; margin-top: .5rem; background: var(--background-alt-blue-france); box-shadow: inset 3px 0 0 var(--border-active-blue-france); }
+.pn-tree__current { padding: .5rem .75rem .5rem 2.5rem; color: var(--text-default-grey); min-height: 2.5rem; position: relative; }
+.pn-tree__current:before { content: ""; position: absolute; left: 1rem; top: 50%; width: 1rem; height: 1px; background: var(--border-default-grey); }
+.pn-pop-band { background: var(--background-contrast-info); box-shadow: 100vw 0 0 0 var(--background-contrast-info); clip-path: inset(0 -100vw 0 0); padding: 1.25rem 0 1.25rem 0; margin-left: -4rem; padding-left: 4rem; }
+/* Panneau latéral (modale DSFR ancrée à droite, glisse de droite à gauche) */
+.pn-drawer > .fr-container { max-width: none; width: 100%; height: 100%; margin: 0; padding: 0; display: flex; justify-content: flex-end; }
+.pn-drawer .fr-modal__body { width: 708px; max-width: 100%; height: 100%; max-height: 100%; margin: 0; border-radius: 0; transform: translateX(100%); transition: transform .3s ease; position: relative; }
+.pn-drawer.fr-modal--opened .fr-modal__body { transform: none; }
+.pn-drawer .fr-modal__header { position: absolute; top: 2.5rem; right: 3rem; z-index: 1; padding: 0; }
+.pn-drawer .fr-modal__content { padding: 3rem 3.75rem 2rem; margin: 0; }
+.pn-drawer .fr-modal__title { font-size: 1.375rem; line-height: 1.75rem; margin-bottom: 1.5rem; }
+@media (prefers-reduced-motion: reduce) { .pn-drawer .fr-modal__body { transition: none; } }
+.pn-split__menu .fr-sidemenu__inner { box-shadow: none; padding-right: 0; }
+.pn-accordion-static .fr-accordion__btn { background-color: var(--background-contrast-blue-france); }
+.pn-tabs-plain .fr-tabs__panel { padding-top: 1.5rem; }
+/* <dialog> natif : neutralise les styles par défaut du navigateur */
+dialog.pn-drawer { position: fixed; inset: 0; width: 100%; height: 100%; max-width: none; max-height: none; margin: 0; padding: 0; border: 0; background: rgba(22, 22, 22, .64); color: inherit; overflow: hidden; }
+dialog.pn-drawer::backdrop { background: transparent; }
+.pn-drawer .fr-modal__body { overflow-y: auto; background: var(--background-default-grey); }
+dialog.pn-drawer { align-items: stretch; }
+.pn-drawer > .fr-container { height: 100%; align-items: stretch; }
+.pn-drawer .fr-modal__body { flex: 0 0 708px; max-height: none; height: 100%; }
+@media (max-width: 767px) { .pn-drawer .fr-modal__body { flex-basis: 100%; } }
+dialog.pn-drawer > .fr-container { align-self: stretch; max-height: none; margin: 0; }
+.pn-drawer .fr-toggle__label { white-space: nowrap; }
+dialog.pn-drawer { display: block; }
+dialog.pn-drawer > .fr-container { height: 100%; }
+dialog.pn-drawer::before, dialog.pn-drawer::after { display: none; }
+/* Libellé de la rubrique courante (maquette : texte bleu, pas d’onglet) */
+.pn-section-label { margin: 0 0 2.5rem; padding-top: .875rem; font-size: 1rem; line-height: 1.5rem; font-weight: 500; color: var(--text-action-high-blue-france); }
+/* Extrait de icons-business (DSFR) : seule l’icône calendrier est utilisée (RGESN) */
+.fr-icon-calendar-line:after, .fr-icon-calendar-line:before { -webkit-mask-image: url(../dsfr/icons/business/calendar-line.svg); mask-image: url(../dsfr/icons/business/calendar-line.svg); }
+/* Page « Contexte de la visite » */
+.pn-alert-fixed { max-width: 588px; }
+.pn-required { color: var(--text-default-error); }
+.pn-sep { margin: 2rem 0 2rem; border: 0; height: 1px; background: var(--background-alt-grey-active); padding: 0; }
+.pn-context-form .fr-fieldset { margin-inline: 0; padding: 0; border: 0; }
+.pn-context-form .fr-fieldset__legend { padding: 0; margin-bottom: 1rem; }
+.pn-context-form .fr-fieldset__element { margin-bottom: 1rem; }
+.pn-context-form .fr-fieldset__element:last-child { margin-bottom: 0; }
+.pn-context-form .fr-input-group { margin-top: 0; }
+.pn-main-pad { padding-bottom: 3rem; }
+/* Le <dialog> est masqué par display:none tant qu’il est fermé : on neutralise la visibilité DSFR pour que le focus puisse y entrer immédiatement */
+dialog.pn-drawer { visibility: visible; }
+dialog.pn-drawer:not([open]) { display: none; }
+/* Page « Constat détaillé » : boutons de navigation côte à côte */
+.pn-btn-row { display: flex; flex-wrap: wrap; gap: .625rem; }
+
+/* Modales centrées du constat détaillé (<dialog> natif + classes DSFR de la modale) */
+dialog.pn-dialog { position: fixed; inset: 0; width: 100%; height: 100%; max-width: none; max-height: none; margin: 0; padding: 0; border: 0; display: block; visibility: visible; background: rgba(22, 22, 22, .64); color: inherit; overflow-y: auto; opacity: 0; transition: opacity .3s ease; }
+dialog.pn-dialog:not([open]) { display: none; }
+dialog.pn-dialog.fr-modal--opened { opacity: 1; }
+dialog.pn-dialog::backdrop { background: transparent; }
+dialog.pn-dialog::before, dialog.pn-dialog::after { display: none; }
+.pn-dialog > .fr-container { max-width: none; margin: 0; padding: 5rem 1rem 3rem; height: auto; min-height: 100%; display: flex; justify-content: center; align-items: flex-start; pointer-events: none; }
+.pn-dialog .fr-modal__body { pointer-events: auto; flex: 0 1 792px; width: 792px; max-width: 100%; max-height: none; height: auto; overflow: visible; margin: 0; background: var(--background-default-grey); }
+.pn-dialog .fr-modal__header { padding: 1rem 2rem 0; }
+.pn-dialog .fr-modal__content { margin: 0; padding: 0 2rem 2rem; overflow: visible; }
+.pn-dialog .fr-modal__title { font-size: 1.375rem; line-height: 1.75rem; margin-bottom: 1.5rem; }
+@media (prefers-reduced-motion: reduce) { dialog.pn-dialog { transition: none; } }
+
+/* Altérations : accordéons à plat (maquette), tags, séparateurs, pied de modale */
+.pn-accordions { list-style: none; margin: 0; padding: 0; }
+.pn-accordions > li { padding: 0; margin: 0; list-style: none; }
+.pn-accordions .fr-accordion__title { margin: 0; }
+.pn-accordions .fr-collapse--expanded { padding-top: .5rem; padding-bottom: 1.5rem; }
+.pn-accordions .fr-tags-group { margin: 0; }
+.pn-sep--tight { margin: 1.5rem 0; }
+.pn-photo-row { margin-top: 1.5rem; }
+.pn-modal-footer { display: flex; justify-content: flex-end; align-items: center; gap: 1.5rem; margin-top: 2.5rem; }
+.pn-modal-footer .fr-btn[disabled] { color: var(--text-disabled-grey); }
+/* Ajustements d’après maquette (7868:38123 / 7868:39586) */
+.pn-dialog .fr-modal__header { padding-bottom: 1.3rem; }
+.pn-accordions .fr-collapse { margin: 0; padding-left: 0; padding-right: 0; }
+.pn-accordions .fr-collapse--expanded { padding-bottom: 1rem; }
+.pn-env-field { margin-bottom: 1.125rem; }
+
+/* Constat général : champ de commentaires sous la préconisation cochée (maquette 7897:26131) */
+.pn-preco-comment { margin: 1rem 0 .5rem; }
+.pn-preco-comment[hidden] { display: none; }
+.pn-preco-comment .fr-btn { margin-top: .5rem; }
+#preconisations-legend { display: flex; align-items: center; gap: .25rem; }
+.pn-preco-wrap { position: relative; }
+.pn-preco-wrap > .fr-tooltip { position: absolute; width: max-content; }
+[data-autre][hidden] { display: none; }
+
+/* Tuiles du constat détaillé : barre inférieure bleu France (maquette) */
+.pn-tile-center .fr-tile__title:before,
+.pn-tile-center .fr-tile__title button:before { background-image: linear-gradient(0deg, var(--border-plain-blue-france), var(--border-plain-blue-france)); }

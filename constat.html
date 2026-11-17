@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="fr" data-fr-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Constat d’état - Patrinotes - Ministère de la Culture</title>
+  <link rel="preload" href="dsfr/fonts/Marianne-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="dsfr/core/core.min.css">
+  <link rel="stylesheet" href="dsfr/component/link/link.min.css">
+  <link rel="stylesheet" href="dsfr/component/button/button.min.css">
+  <link rel="stylesheet" href="dsfr/component/logo/logo.min.css">
+  <link rel="stylesheet" href="dsfr/component/badge/badge.min.css">
+  <link rel="stylesheet" href="dsfr/component/form/form.min.css">
+  <link rel="stylesheet" href="dsfr/component/input/input.min.css">
+  <link rel="stylesheet" href="dsfr/component/header/header.min.css">
+  <link rel="stylesheet" href="dsfr/component/tile/tile.min.css">
+  <link rel="stylesheet" href="dsfr/component/tab/tab.min.css">
+  <link rel="stylesheet" href="dsfr/component/footer/footer.min.css">
+  <link rel="stylesheet" href="dsfr/component/alert/alert.min.css">
+  <link rel="stylesheet" href="dsfr/component/breadcrumb/breadcrumb.min.css">
+  <link rel="stylesheet" href="dsfr/component/skiplink/skiplink.min.css">
+  <link rel="stylesheet" href="dsfr/utility/icons/icons-map/icons-map.min.css">
+  <link rel="stylesheet" href="dsfr/utility/icons/icons-user/icons-user.min.css">
+  <link rel="stylesheet" href="dsfr/utility/icons/icons-system/icons-system.min.css">
+  <link rel="stylesheet" href="dsfr/utility/icons/icons-document/icons-document.min.css">
+  <link rel="stylesheet" href="dsfr/utility/icons/icons-buildings/icons-buildings.min.css">
+  <link rel="stylesheet" href="css/patrinotes.css">
+</head>
+<body>
+  <div class="fr-skiplinks">
+    <nav class="fr-container" role="navigation" aria-label="Accès rapide">
+      <ul class="fr-skiplinks__list">
+        <li><a class="fr-link" href="#contenu">Contenu</a></li>
+        <li><a class="fr-link" href="#footer">Pied de page</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <header role="banner" class="fr-header">
+    <div class="fr-header__body">
+      <div class="fr-container">
+        <div class="fr-header__body-row">
+          <div class="fr-header__brand fr-enlarge-link">
+            <div class="fr-header__brand-top">
+              <div class="fr-header__logo">
+                <p class="fr-logo">Ministère<br>de la Culture</p>
+              </div>
+            </div>
+            <div class="fr-header__service">
+              <a href="index.html" title="Accueil - Patrinotes - Ministère de la Culture">
+                <p class="fr-header__service-title">Patrinotes
+                  <span class="fr-badge fr-badge--sm fr-badge--success fr-badge--no-icon">En ligne</span>
+                </p>
+              </a>
+              <p class="fr-header__service-tagline">Les outils du patrimoine en mobilité</p>
+            </div>
+          </div>
+          <div class="fr-header__tools">
+            <div class="fr-header__tools-links">
+              <ul class="fr-btns-group">
+                <li><a class="fr-btn fr-icon-account-circle-fill" href="#">Mon compte</a></li>
+                <li><a class="fr-btn fr-icon-government-fill" href="#">UDAP</a></li>
+                <li><a class="fr-btn fr-icon-question-fill" href="#">Aide</a></li>
+                <li><a class="fr-btn fr-icon-logout-box-r-line" href="#">Déconnexion</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="contenu" role="main">
+    <section class="pn-band pn-band--info fr-pt-3w fr-pb-10w" aria-labelledby="titre-constat">
+      <div class="fr-container">
+        <nav role="navigation" class="fr-breadcrumb" aria-label="vous êtes ici :">
+          <ol class="fr-breadcrumb__list">
+            <li><a class="fr-breadcrumb__link" href="index.html">Retour à l’accueil</a></li>
+          </ol>
+        </nav>
+        <h1 id="titre-constat" class="fr-h3 fr-mb-4w">Constat d’état</h1>
+        <p class="fr-text--lg fr-mb-4w">Recherchez un MH pour récupérer ses informations et réaliser un constat :</p>
+
+        <div class="fr-grid-row"><div class="fr-col-lg-10">
+        <div class="fr-grid-row fr-grid-row--bottom fr-mb-4w">
+          <div class="fr-col">
+            <div class="pn-combobox">
+              <div class="fr-input-group">
+                <label class="fr-label" for="monument-search">Nom ou référence du monument</label>
+                <div class="fr-input-wrap fr-icon-search-line">
+                  <input class="fr-input" type="text" id="monument-search" name="monument" autocomplete="off"
+                         role="combobox" aria-autocomplete="list" aria-expanded="false"
+                         aria-controls="list-edifices" aria-haspopup="listbox">
+                </div>
+              </div>
+              <div id="monument-popup" class="pn-popup fr-tabs" hidden>
+                <ul class="fr-tabs__list" role="tablist" aria-label="Type de monument">
+                  <li role="presentation"><button type="button" id="tab-edifices" class="fr-tabs__tab" data-key="edifices" role="tab" aria-selected="true" aria-controls="panel-edifices">Édifices (<span id="count-edifices">0</span>)</button></li>
+                  <li role="presentation"><button type="button" id="tab-mobiliers" class="fr-tabs__tab" data-key="mobiliers" role="tab" aria-selected="false" tabindex="-1" aria-controls="panel-mobiliers">Mobiliers (<span id="count-mobiliers">0</span>)</button></li>
+                </ul>
+                <div id="panel-edifices" class="fr-tabs__panel fr-tabs__panel--selected" role="tabpanel" aria-labelledby="tab-edifices">
+                  <ul id="list-edifices" class="pn-list" role="listbox" aria-label="Édifices (base Mérimée)"></ul>
+                </div>
+                <div id="panel-mobiliers" class="fr-tabs__panel" role="tabpanel" aria-labelledby="tab-mobiliers">
+                  <ul id="list-mobiliers" class="pn-list" role="listbox" aria-label="Mobiliers (base Palissy)"></ul>
+                </div>
+              </div>
+              <p id="monument-status" class="fr-sr-only" role="status" aria-live="polite"></p>
+            </div>
+          </div>
+          <div class="fr-ml-1w">
+            <!-- Géolocalisation : déjà codée par ailleurs, non reprise dans ce prototype -->
+            <button type="button" class="fr-btn fr-icon-map-pin-2-line" title="Rechercher autour de moi">Rechercher autour de moi</button>
+          </div>
+        </div>
+
+        <div class="fr-grid-row fr-grid-row--middle">
+          <div class="fr-col-auto fr-mr-2w">
+            <button type="button" class="fr-btn fr-btn--secondary fr-btn--icon-left fr-icon-file-add-line">Créer un constat sans lien MH</button>
+          </div>
+          <div class="fr-col">
+            <div class="fr-alert fr-alert--info fr-alert--sm pn-alert-inline">
+              <p>Vous pouvez commencer un constat d’état et le relier plus tard à un monument.</p>
+            </div>
+          </div>
+        </div>
+        </div></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="fr-footer" role="contentinfo" id="footer">
+    <div class="fr-container">
+      <div class="fr-footer__body">
+        <div class="fr-footer__brand fr-enlarge-link">
+          <a href="index.html" title="Retour à l’accueil du site - Patrinotes - Ministère de la Culture">
+            <p class="fr-logo">Ministère<br>de la Culture</p>
+          </a>
+        </div>
+        <div class="fr-footer__content">
+          <ul class="fr-footer__content-list">
+            <li class="fr-footer__content-item"><a class="fr-footer__content-link" target="_blank" rel="noopener external" title="info.gouv.fr - nouvelle fenêtre" href="https://info.gouv.fr">info.gouv.fr</a></li>
+            <li class="fr-footer__content-item"><a class="fr-footer__content-link" target="_blank" rel="noopener external" title="service-public.fr - nouvelle fenêtre" href="https://service-public.fr">service-public.fr</a></li>
+            <li class="fr-footer__content-item"><a class="fr-footer__content-link" target="_blank" rel="noopener external" title="legifrance.gouv.fr - nouvelle fenêtre" href="https://legifrance.gouv.fr">legifrance.gouv.fr</a></li>
+            <li class="fr-footer__content-item"><a class="fr-footer__content-link" target="_blank" rel="noopener external" title="data.gouv.fr - nouvelle fenêtre" href="https://data.gouv.fr">data.gouv.fr</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="fr-footer__bottom">
+        <ul class="fr-footer__bottom-list">
+          <li class="fr-footer__bottom-item"><a class="fr-footer__bottom-link" href="#">Accessibilité : non conforme</a></li>
+          <li class="fr-footer__bottom-item"><a class="fr-footer__bottom-link" href="#">Mentions légales</a></li>
+          <li class="fr-footer__bottom-item"><a class="fr-footer__bottom-link" href="#">Politique de confidentialité</a></li>
+          <li class="fr-footer__bottom-item"><a class="fr-footer__bottom-link" href="#">Conditions générales d’utilisation</a></li>
+          <li class="fr-footer__bottom-item"><a class="fr-footer__bottom-link" href="#">Plan du site</a></li>
+        </ul>
+        <div class="fr-footer__bottom-copy">
+          <p>Sauf mention explicite de propriété intellectuelle détenue par des tiers, les contenus de ce site sont proposés sous <a href="https://github.com/etalab/licence-ouverte/blob/master/LO.md" target="_blank" rel="noopener external" title="licence etalab-2.0 - nouvelle fenêtre">licence etalab-2.0</a></p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="dsfr/core/core.nomodule.min.js" nomodule></script>
+  <script src="js/suggestions-data.js"></script>
+  <script src="js/autocomplete.js"></script>
+</body>
+</html>

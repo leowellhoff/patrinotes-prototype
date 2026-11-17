@@ -1,0 +1,6 @@
+Prototype Patrinotes — page d'accueil (desktop)
+Lancer (Terminal, Node.js installé) :
+  cd chemin/vers/patrinotes
+  npx serve
+puis ouvrir l'adresse affichée (ex. http://localhost:3000).
+Un double-clic sur index.html ne suffit pas : Chrome bloque les icônes et polices DSFR en file://.
